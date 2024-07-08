@@ -1,34 +1,10 @@
 package com.jds.keywords;
 
-import static org.testng.Assert.assertEquals;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.time.Duration;
-import java.util.Properties;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-
-import com.aventstack.extentreports.MediaEntityBuilder;
 import com.jds.config.InitializeDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Keywords{
 	

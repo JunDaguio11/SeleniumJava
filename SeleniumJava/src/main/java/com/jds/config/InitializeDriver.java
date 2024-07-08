@@ -1,18 +1,10 @@
 package com.jds.config;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;

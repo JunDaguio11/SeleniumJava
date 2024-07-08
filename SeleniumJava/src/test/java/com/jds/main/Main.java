@@ -11,10 +11,6 @@ import java.util.Properties;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.annotations.Test;
 
 import com.jds.config.InitializeDriver;
@@ -304,15 +300,5 @@ public class Main extends InitializeDriver{
 			ex.printStackTrace();
 		}		
 		return prop;
-	}
-	
-	
-	public void testElement() {
-		WebDriver testDriver;
-		EdgeOptions edgeOptions = new EdgeOptions();
-		testDriver = new EdgeDriver(edgeOptions);
-		testDriver.get("https://demowebshop.tricentis.com/");
-		testDriver.findElement(By.className("ico-login")).click();
-		testDriver.findElement(By.xpath("//input[@value='Log in']")).click();
 	}
 }
