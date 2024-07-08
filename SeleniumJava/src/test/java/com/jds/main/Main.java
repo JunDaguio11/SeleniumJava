@@ -37,10 +37,10 @@ public class Main extends InitializeDriver{
 	}
 	
 	public void updateOverallStatus(String module) throws IOException {
-		String moduleExcelPath = "Config\\" + module + ".xlsx";
+		String moduleExcelPath = root+"\\Config\\" + module + ".xlsx";
 		FileInputStream fileInputStream = new FileInputStream(moduleExcelPath);
 
-		String mainExcelPath = "Config\\MainDriver.xlsx";
+		String mainExcelPath = root+"\\Config\\MainDriver.xlsx";
 
 		XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
 		XSSFSheet worksheet = workbook.getSheet("TestCases");
@@ -102,7 +102,7 @@ public class Main extends InitializeDriver{
 	}
 	
 	public LinkedList<String> readMainDriverExcel() throws IOException {
-		String excelPath = "Config\\MainDriver.xlsx";
+		String excelPath = root+"\\Config\\MainDriver.xlsx";
 		FileInputStream fileInputStream = new FileInputStream(excelPath);
 		
 		XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
@@ -126,7 +126,7 @@ public class Main extends InitializeDriver{
 	
 	public void readModuleExcelAndExecute(String module) throws Exception {
 		//String module = "Register";
-		String excelPath = "Config\\" + module + ".xlsx";
+		String excelPath = root+"\\Config\\" + module + ".xlsx";
 		FileInputStream fileInputStream = new FileInputStream(excelPath);
 
 		XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
@@ -284,17 +284,17 @@ public class Main extends InitializeDriver{
 		Properties prop = new Properties();
 		try {
 			// load common properties file
-			InputStream input = new FileInputStream("Config/Configuration.properties");
+			InputStream input = new FileInputStream(root+"//Config/Configuration.properties");
 			prop.load(input);
-			input = new FileInputStream("Object Repository/Header.properties");
+			input = new FileInputStream(root+"//Object Repository/Header.properties");
 			prop.load(input);
-			input = new FileInputStream("Object Repository/LeftNavMenu.properties");
+			input = new FileInputStream(root+"//Object Repository/LeftNavMenu.properties");
 			prop.load(input);
-			input = new FileInputStream("Object Repository/TopNavifationMenu.properties");
+			input = new FileInputStream(root+"//Object Repository/TopNavifationMenu.properties");
 			prop.load(input);
 			
 			//load module specific file
-			input = new FileInputStream("Object Repository/" + module + "Page.properties");
+			input = new FileInputStream(root+"//Object Repository/" + module + "Page.properties");
 			prop.load(input);
 		} catch (IOException ex) {
 			ex.printStackTrace();
