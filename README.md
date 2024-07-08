@@ -1,3 +1,5 @@
+**Note: This was created by me for my own learning**
+
 This is an automation framework for web application using Selenium WebDriver with Java as it's language.
 
 It utilizes a single driver/test function which utilizes the config/excel to determine which modules and test cases are marked to execute. 
